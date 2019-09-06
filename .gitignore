@@ -1,0 +1,6 @@
+.history
+tmp/*
+log/*
+
+# Docker data
+/data/*

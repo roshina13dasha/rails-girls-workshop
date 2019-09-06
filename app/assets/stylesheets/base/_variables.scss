@@ -1,0 +1,25 @@
+// Base
+$base-font: 'Nunito Sans', sans-serif;
+$border-radius: 10px;
+$active-color: color(blue-100);
+$error-color: color(red-100);
+
+// Shadow
+$shadow-xs: 0 2px 4px 0 rgba(129, 143, 157, 0.1);
+$shadow-sm: 0 2px 8px 0 rgba(129, 143, 157, 0.2);
+$shadow-md: 0 8px 16px 0 rgba(129, 143, 157, 0.2);
+
+// Animation
+$transition-duration: 0.1s;
+$transition-function: ease-in-out;
+
+// Header
+$header-height: 68px;
+$header-z-index: 10;
+
+// Grid
+$container-max-width-lg: 1224px;
+
+
+// Alert
+$alert-z-index: $header-z-index - 1;

@@ -1,0 +1,88 @@
+$input-height: 50px;
+$input-height-xs: 40px;
+
+.main-input {
+  margin-bottom: 20px;
+}
+.field_with_errors {
+  .main-input__label {
+    color: $error-color;
+  }
+  .main-input__field {
+    border-color: $error-color;
+    &:hover,
+    &:focus {
+      border-color: $error-color;
+    }
+  }
+  .error {
+    @extend .icon-triangle-warning-sm;
+    display: block;
+    padding-top: 4px;
+    color: $error-color;
+    font-size: 14px;
+    letter-spacing: -0.19px;
+    line-height: division(20, 14);
+    &:before {
+      @extend .icon;
+      display: inline-block;
+      margin-right: 4px;
+      font-size: 20px;
+      vertical-align: top;
+    }
+  }
+}
+.main-input__label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: division(20, 14);
+}
+.main-input__field {
+  @include transition-settings(border-color);
+  height: $input-height;
+  padding-right: 14px;
+  padding-left: 14px;
+  border: 1px solid color(black-20);
+  border-radius: $border-radius;
+  background-color: color(white-100);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: division(26, 18);
+  &:focus,
+  &:hover {
+    border-color: $active-color;
+  }
+}
+.main-input__field--xs {
+  height: $input-height-xs;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: division(24, 16);
+}
+.main-input__field--textarea {
+  height: auto;
+  min-height: $input-height;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: division(24, 16);
+}
+.main-input__message {
+  display: none;
+  padding-top: 4px;
+  font-size: 14px;
+  letter-spacing: -0.19px;
+  line-height: division(20, 14);
+}
+.main-input__message-icon {
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 20px;
+  vertical-align: top;
+}
+.main-input__message-txt {
+  display: inline-block;
+  padding-top: 2px;
+}

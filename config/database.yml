@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV.fetch("PG_HOST") { 'localhost' } %>
+  password: <%= ENV.fetch("PG_PASSWORD") { '' } %>
+  user: <%= ENV.fetch("PG_USER") { '' } %>
+
+development:
+  <<: *default
+  database: rails-girls-workshop_development
+
+test:
+  <<: *default
+  database: rails-girls-workshop_test
+
+production:
+  <<: *default
+  database: rails-girls-workshop_production
+  username: rails_girls
+  password: <%= ENV['RAILS_GIRLS_DATABASE_PASSWORD'] %>

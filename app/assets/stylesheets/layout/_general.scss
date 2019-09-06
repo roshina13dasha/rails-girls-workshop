@@ -1,0 +1,13 @@
+.main-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  height: calc(100vh - #{$header-height});
+  overflow-y: auto;
+}

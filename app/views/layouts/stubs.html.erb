@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsGirlsWorkshop</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="main-wrap">
+      <header class="main-header">
+        <a href="/" class="main-header__logo">
+          <%=image_tag('logo.svg', alt: 'BeFocused')%>
+        </a>
+        <a href="/" class="icon-btn">
+          <i class="icon-btn__icon icon icon-circle-info"></i>
+          <span class="icon-btn__txt">About</span>
+        </a>
+      </header>
+
+      <main class="main-content">
+        <%= yield %>
+      </main>
+    </div>
+  </body>
+</html>
